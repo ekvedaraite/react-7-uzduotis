@@ -3,7 +3,7 @@ import "../scss/products.scss"
 import "../scss/buttons.scss"
 import "../scss/nav.scss"
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const BASE_URL = "https://sophisticated-humane-dandelion.glitch.me/";
 
@@ -31,12 +31,12 @@ const ProductsPage = () => {
   return (
     <div>
       <nav>
-        <Link to="/products" style={{ color: location.pathname === '/products' ? 'red' : 'inherit' }}>
+        <NavLink to="/products" activeClassName='active'>
           Products
-        </Link>
-        <Link to="/form" style={{ color: location.pathname === '/form' ? 'red' : 'inherit' }}>
+        </NavLink>
+        <NavLink to="/form" activeClassName='active'>
           Form
-        </Link>
+        </NavLink>
       </nav>
       <section id="app" className="products">
         {products.map((x) => (
