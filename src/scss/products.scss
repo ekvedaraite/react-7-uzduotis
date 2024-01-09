@@ -1,0 +1,25 @@
+@import 'variables';
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .product {
+        border: 1px solid $light-gray;
+        width: 250px;
+        text-align: center;
+        padding: 15px;
+        margin: 15px;
+
+        img {
+            width: 230px;
+        }
+
+        .price {
+            color: $red;
+            font-size: 2em;
+            font-weight: bold;
+            margin: 10px;
+        }
+    }
+}
